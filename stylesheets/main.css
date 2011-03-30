@@ -1,0 +1,349 @@
+/* 
+  HTML5 ✰ Boilerplate 
+  
+  style.css contains a reset, font normalization and some base styles.
+  
+  credit is left where credit is due.
+  much inspiration was taken from these projects:
+    yui.yahooapis.com/2.8.1/build/base/base.css
+    camendesign.com/design/
+    praegnanz.de/weblog/htmlcssjs-kickstart
+*/
+
+/* 
+  html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+  v1.4 2009-07-27 | Authors: Eric Meyer & Richard Clark
+  html5doctor.com/html-5-reset-stylesheet/
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}                  
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { 
+    display:block;
+}
+
+nav ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+
+a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; }
+
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
+
+/* tables still need cellspacing="0" in the markup */
+table { border-collapse:collapse; border-spacing:0; }
+
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+
+input, select { vertical-align:middle; }
+
+/* END RESET CSS */
+
+html { 
+	height: 100%;
+	color: #444;
+	font-family: sans-serif;
+}
+
+body {
+	height: 100%;
+	background-color: black;
+}
+
+#content {
+    min-height: 100%;
+	background-color: white;
+	margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+h1{
+	text-align: center;
+	background-color: #003366;
+    width: 100%;
+}
+
+h3 {
+    text-align: center;
+    display: block;
+}
+
+/* Search */
+
+#search {
+    padding-top: 20px;
+    margin: 0 auto 20px auto;
+    width: 100%;
+    text-align: center;
+}
+
+#search-box {
+    font-size: 1.5em;
+}
+
+#search-button {
+    position: relative;
+    top: 10px;
+}
+
+
+/* Page Controls */
+#counter span {
+    margin: 0 .2em;
+}
+
+/* Alarm table */
+
+#alarms {
+    width: 100%;
+    border-top: 1px solid #444444;
+    border-bottom: 1px solid #444444;
+    table-layout:fixed;
+    border-spacing: 0;
+    min-width: 70em;
+}
+
+/* Headers */
+
+#alarms th {
+    border-top: 1px solid #444444;
+    border-bottom: 1px solid #444444;
+    background-color: #003366;
+    color: white;
+}
+
+/* Filters */
+#filters-header {
+    background-color: #dddddd;
+    text-align: center;
+    font-weight: bold;
+}
+.filter-section {
+    cursor: pointer;
+    vertical-align: bottom;
+    padding: 0;
+    border: 1px solid #444444;
+    border-bottom: none;
+    z-index: 1000;
+    background-color: #dddddd;
+}
+
+.filter {
+    font-size: .8em;
+}
+
+.filter button {
+    margin: 5px;
+    padding: 1px 3px;
+}
+
+.filter-content {
+    text-align: center;
+    position: absolute;
+    margin-left: -1px;
+    background-color: white;
+    border: 1px solid #444444;
+    border-top: none;
+    z-index: 999;
+}
+
+.add-filter {
+    font-size: .8em;
+    margin: 5px;
+}
+
+
+/* Alarms */
+
+.action, .date, .time {
+    text-align: center;
+}
+
+#date-col, #time-col, #srcPrt-col, #dstPrt-col {
+    width: 5em;
+}
+
+#action-col  {
+    width: 9em;
+}
+
+#srcIp-col, #dstIp-col {
+    width: 8em;
+}
+
+#alarm-col {
+    width: 12em;
+}
+
+.alarm {
+    text-align: left;
+}
+
+.alarm-instance td {
+    border-top: 1px solid #444444;
+    border-bottom: 1px solid #444444;
+    padding: 2px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.alarm-instance td:hover {
+    cursor: pointer;
+}
+
+.alarm button {
+    float: right;
+}
+
+.alarm .ui-button-text, .add-filter .ui-button-text {
+    display: none;
+}
+
+.expando {
+    height: 5em;
+}
+
+.expando table {
+    float: left;
+}
+
+.expando td {
+    border: none;
+}
+
+.expando .label {
+    font-weight: bold;
+}
+
+.expando .ui-button-text {
+    display: none;
+}
+/* Menu */
+
+.ui-menu {
+    padding: 5px;
+    position: absolute;
+    z-index: 99999;
+    text-align: left;
+}
+
+.ui-button-icon-primary {
+    float: left;
+}
+
+.ui-button-text {
+    float: left;
+    font-size: .8em;
+    padding: 0px 5px 2px 5px;
+}
+
+.ui-button-icon-secondary {
+    float: right;
+}
+
+/* Controls */
+
+#controls {
+    padding: 0 5px 0 0;
+    float: right;
+    width: 150px;
+    margin: -80px 10px 10px 0;
+    background-color: white;
+/*    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px; */
+    
+}
+
+#controls button {
+    width: 140px;
+    margin: 7px;
+    font-size: 1em;
+    display: block;
+}
+
+/* Dialogs */
+
+.filter-dialog select {
+    width: 100px;
+    height: 30px;
+    font-size: .8em;
+}
+
+.filter-dialog input {
+    display: inline;
+    width: 100px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    font-size: .8em;
+}
+
+.filter-dialog button {
+    position: relative;
+    top: 15px;
+    height: 30px;
+}
+
+/* Time Dialog */
+
+#time-dialog input {
+    width: 2em;
+}
+
+#ampm {
+    width: 5em;
+}
+
+#alarm-predicate, #ip-predicate, #message-predicate, #action-predicate {
+    width: 15em;
+}
+
+#ip-dialog label {
+    display: block;
+    float: left;
+    width: 5em;
+}
+
+#ip-dialog input {
+    
+}
+
+input.ip {
+    display: block;
+    float: left;
+    width: 2.6em;
+    margin-left: .1em;
+}
